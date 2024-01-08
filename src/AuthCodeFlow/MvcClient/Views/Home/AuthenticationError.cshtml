@@ -1,0 +1,20 @@
+﻿@model object
+
+@{
+    ViewBag.Title = "Authentication Error";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="alert-danger">@Html.Encode(ViewBag.Error)</div>
+    <br/>
+    <div class="alert-danger">@Html.Encode(ViewBag.ErrorDescription)</div>
+</div>
+<br/>
+<div class="container">
+    <div class="row">
+        @Html.ActionLink("Back to home", "Index", "Home", null, new { @class = "btn btn-info" })
+    </div>
+</div>

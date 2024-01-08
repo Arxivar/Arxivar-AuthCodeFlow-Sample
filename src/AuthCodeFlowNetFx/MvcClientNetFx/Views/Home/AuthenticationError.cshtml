@@ -1,0 +1,17 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Authentication problem";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="alert-danger">@Html.Encode(ViewBag.ErrorMessage)</div>
+</div>
+<br/>
+<div class="container">
+    <div class="row">
+        @Html.ActionLink("Back to home", "Index", "Home", null, new { @class = "btn btn-info" })
+    </div>
+</div>

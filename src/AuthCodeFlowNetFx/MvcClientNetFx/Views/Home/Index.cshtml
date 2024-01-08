@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "ARXivar Authorization integration .net framework";
+}
+
+<div class="container-t4">
+    <div class="row">
+        <h1 class="display-4">Sample AspNet Framework application</h1>
+    </div>
+    <div class="row-t6" style="padding-top: 30px;">
+        @if (!User.Identity?.IsAuthenticated ?? false)
+        {
+            <p>
+                       <i>ARXivar</i> login is required to access the application private pages
+                <br/>
+                OAuth2 Code Flow will be used to authorize the user
+            </p>
+
+            @Html.ActionLink("Login", "Secure", "Home", null, new { @class = "btn btn-info" })
+        }
+        else
+        {
+            <p>
+                User is authorized to access application private pages
+            </p>
+            <p>
+                @Html.ActionLink("Show me private page", "Secure", "Home", null, new { @class = "btn btn-info" })
+            </p>
+        }
+
+    </div>
+</div>

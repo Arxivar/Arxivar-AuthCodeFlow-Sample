@@ -1,0 +1,19 @@
+<h1>User is authorized</h1>
+<p>
+    Hi <b>@User.Identity.Name</b>, you are authorized to access restricted site pages.
+    <br/>
+    Authorization claims come from <i>ARXivar</i> authorization context.
+</p>
+<p>
+    Here's your authorization context:
+</p>
+
+<h3>Claims</h3>
+
+<dl>
+    @foreach (var claim in Context.GetOwinContext().Authentication.User.Claims)
+    {
+        <dt>@claim.Type</dt>
+        <dd>@claim.Value</dd>
+    }
+</dl>
