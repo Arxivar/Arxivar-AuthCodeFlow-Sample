@@ -1,23 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp8</TargetFramework>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>disable</Nullable>
-    <UserSecretsId>6cb978ee-99d3-4540-823b-44cae04a1917</UserSecretsId>
+    <UserSecretsId>6cb978ee-99d3-4540-823b-44cae04a1917</UserSecretsId>    
   </PropertyGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.2.0" />            
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.2.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
-  </ItemGroup>  
-
-  <ItemGroup>
-    <Content Include="Views\Home\AuthenticationError.cshtml" />
-  </ItemGroup>  
-
-  <ItemGroup>
-    <Compile Include="ArxivarAuthSettings.cs" />
-  </ItemGroup>
+  </ItemGroup> 
 </Project>
